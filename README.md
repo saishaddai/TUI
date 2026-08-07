@@ -48,7 +48,7 @@ Each app is a separate folder in this repository. The roadmap is designed to int
 
 ---
 
-## ⚠️ Challenges You Will Face
+## ⚠️ Challenges to Face
 - **State management**: keeping track of active views and data changes.
 - **Keyboard shortcuts**: designing intuitive keybindings.
 - **Cross-platform compatibility**: handling differences between Linux, macOS, and Windows terminals.
@@ -103,7 +103,7 @@ The apps included here are not intended for production use or for any critical e
 
 They are designed to:
 
-- Help understand the basics of Go and TUI programming.
+- Help to understand the basics of Go and TUI programming.
 - Serve as small experiments and practice projects.
 - Provide a foundation that can be extended for personal use only.
 
