@@ -71,10 +71,10 @@ These mini-apps will serve as building blocks for more advanced projects such as
 ---
 
 ## 📂 Repository Structure
-/hello-world
-/counter
-/menu
-/todo-list
+- /hello-world
+- /counter
+- /menu
+- /todo-list
 /file-explorer
 /api-client
 /dashboard
