@@ -16,6 +16,12 @@ Press any key to exit.
 
 ---
 
+## ⚠️ Disclaimer
+This project is for learning purposes only.
+It is not intended for production use or critical environments requiring accuracy, reliability, or performance.
+You may extend or adapt it for personal projects, but do not rely on it in professional or production scenarios.
+
+
 ## 🚀 How to Run
 
 1. **Clone the project folder and go to this example's directory**:
@@ -23,8 +29,3 @@ Press any key to exit.
 2. Run the app
 ```Bash
 	go run main.go
-
-## ⚠️ Disclaimer
-This project is for learning purposes only.
-It is not intended for production use or critical environments requiring accuracy, reliability, or performance.
-You may extend or adapt it for personal projects, but do not rely on it in professional or production scenarios.
