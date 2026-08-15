@@ -75,9 +75,9 @@ These mini-apps will serve as building blocks for more advanced projects such as
 - /counter
 - /menu
 - /todo-list
-/file-explorer
-/api-client
-/dashboard
+- /file-explorer
+- /api-client
+- /dashboard
 
 Each folder contains:
 - `main.go` → the app source code
@@ -94,7 +94,6 @@ Each folder contains:
    ```bash
    cd hello-world
    go run main.go
-
 ---
 
 ## ⚠️ Disclaimer
