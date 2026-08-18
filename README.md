@@ -71,13 +71,14 @@ These mini-apps will serve as building blocks for more advanced projects such as
 ---
 
 ## 📂 Repository Structure
-- /hello-world
-- /counter
-- /menu
-- /todo-list
-- /file-explorer
-- /api-client
-- /dashboard
+
+- [hello-world](hello-world/README.md)
+- [counter](counter/README.md)
+- [menu](menu/README.md)
+- [todo-list](todo-list/README.md)
+- [file-explorer](file-explorer/README.md)
+- [api-client](api-client/README.md)
+- [dashboard](dashboard/README.md)
 
 Each folder contains:
 - `main.go` → the app source code
