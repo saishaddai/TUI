@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"os"
+	"runtime"
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
 
 type model struct {
-    cpuUsage    int
-    memoryUsage int
+    cpuUsage    int    // placeholder, extend with real metrics later
+    memoryUsage uint64 // real memory usage
     timeNow     string
 }
 
@@ -23,10 +23,17 @@ func (m model) Init() tea.Cmd {
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
     switch msg := msg.(type) {
     case tickMsg:
-        // Simulate metrics
-        m.cpuUsage = rand.Intn(100)
-        m.memoryUsage = rand.Intn(100)
+        // Update metrics
+        var memStats runtime.MemStats
+        runtime.ReadMemStats(&memStats)
+        m.memoryUsage = memStats.Alloc / 1024 / 1024 // MB
+
+        // CPU usage placeholder (extend with external lib if needed)
+        m.cpuUsage = (int(time.Now().UnixNano()/1e6) % 100)
+
+        // Current time
         m.timeNow = time.Now().Format("15:04:05")
+
         return m, tick() // schedule next tick
     case tea.KeyMsg:
         switch msg.Type {
@@ -39,7 +46,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 func (m model) View() string {
     return fmt.Sprintf(
-        "Mini Dashboard\n\nCPU Usage:    %d%%\nMemory Usage: %d%%\nTime:         %s\n\nPress Esc or Ctrl+C to quit.",
+        "📊 Mini Dashboard\n\nCPU Usage:    %d%%\nMemory Usage: %d MB\nTime:         %s\n\nPress Esc or Ctrl+C to quit.",
         m.cpuUsage, m.memoryUsage, m.timeNow,
     )
 }
